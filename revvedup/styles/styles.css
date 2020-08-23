@@ -1,0 +1,1632 @@
+/* Font */
+
+@font-face {
+    font-family: GrandSportSemital;
+    src: url(../Fonts/grandsportsemital.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: GrandSport;
+    src: url(../Fonts/grandsport.ttf) format('truetype');
+}
+
+.customFontGSS {
+    font-family: GrandSportSemital, Verdana, Tahoma;
+}
+
+.customFontGS {
+    font-family: GrandSport, Verdana, Tahoma;
+}
+
+
+
+
+/* Overall page style */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2a3439;
+}
+
+
+
+/* --- Header --- */
+.main-header {
+    background: black;
+    padding: 20px;
+    color: white;
+    margin: 0 auto;
+    border: 3px solid white;
+}
+.main-header h1 {
+    font-family: GrandSportSemital, Verdana, Tahoma;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 705px) {
+    .main-header h1 {
+        font-size: 35px;
+    }
+    .navbutton {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 475px) {
+    .main-header h1 {
+        font-size: 25px;
+    }
+    .navbutton {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-header h1 {
+        font-size: 22px;
+    }
+    .navbutton {
+        font-size: 8px;
+    }
+}
+
+
+
+/* Navbar */
+
+/* sideways carrot (>) means specifying only if direct child of X thing to left of carrot */
+/* .main-header>nav>div { 
+    background: blue;
+} */
+
+.normnav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.normnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.main-header nav a:visited {
+    color: white;
+}
+.main-header nav a:hover {
+    background: #555;
+}
+@media(max-width: 1024px) {
+    .normnav {
+        width: 85%;
+        padding: 0 10px;
+
+    }
+    .normnav a {
+        padding: 10px 15px;
+    }
+}
+
+.navdropdown {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.navdropdown .navbutton {   /*styling properties of button and div*/
+    background-color: black;
+    padding: 15px;
+    color: white;
+    overflow: hidden;
+    border: none;
+}
+
+.navbutton>img {
+    width: 30px;
+    height: 30px;
+}
+
+.togcontent {
+    position: absolute;
+    right: -5px;
+    width: 60vw;
+    background-color: lightgray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.togcontent a {    /*Dropdown links styling*/
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 850px) {   /*Mobile Navbar, popup    ------    Code came from here https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+    .main-header nav {
+        display: none;
+    }
+    .main-header h1 {
+        margin-bottom: 0;
+    }
+    .navdropdown {  /*initial properties of div*/
+        display: inline-block;
+    }
+    .navbutton:hover, .navbutton:focus { /*Color when clicked or hovering*/
+        background-color: #555;
+    }
+    .togcontent { /*Dropdown Content box styling*/
+        display: none;
+    }
+    .togcontent a:hover {
+        background-color: slategray;
+    }
+}
+
+.tada {
+    display: block;
+}
+
+
+
+/* To Top Tab */
+#back2Top {
+    width: 100px;
+    overflow: hidden;
+    line-height: 50px;
+    z-index: 999;
+    display: none;
+    position: fixed;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #E64E01;
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    vertical-align: center;
+
+
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#back2Top:hover {
+    background-color: #DDF;
+    /* transition: 0.075s; */
+}
+#back2Top:not(:hover) {
+    background-color: #E64E01;
+    /* transition: 0.075s; */
+}
+
+
+
+
+
+
+/* --- Body --- */
+
+.main-body {
+    background: white;
+    min-height: 400px;
+}
+
+
+
+
+/* Footer */
+
+.page-bottom-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.page-bottom {
+    width: 1100px;    
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 25px 50px 25px;
+}
+
+.page-bottom>div {
+    text-align: center;
+}
+
+
+.page-bottom img {      /*Controls All Images in Page Bottom*/
+    width: 75%;
+    border: 2px solid silver;
+    border-radius: 50%;
+    bottom: 0;
+    box-shadow: 0px 8px 6px -6px black;
+}
+
+.page-bottom-image {
+    width: 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.page-bottom-image>img {
+    max-width: 175px;
+}
+
+.side {         /*Controls left and right side of center image*/
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+
+.sidespan {
+    padding: 5px 0px;
+}
+
+.sidespan span {
+    font-size: 17px;
+    color: rgb(182, 175, 175);
+}
+
+.bottom-side {
+    display: flex;
+}
+
+.bottom-side div {
+    padding-top: 15px;
+    width: 50%;
+    position: relative;
+}
+
+.bottom-side img {
+    width: 45%;
+}
+
+.bottom-side img:hover {
+    opacity: 0.75;
+    -moz-opacity:0.75;
+    -khtml-opacity: 0.75;
+}
+
+
+@media (max-width: 1024px) {
+    
+    .page-bottom {
+        padding: 0 15px 50px 15px;
+    }
+    
+    .sidespan span {
+        font-size: 15px;
+    }
+
+    .bottom-side img {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .page-bottom {
+        padding: 0 10px 50px 10px;
+    }
+
+    .page-bottom-image {
+        width: 24%;
+    }
+
+    .page-bottom-image img {
+        width: 95%;
+    }
+
+    .side {
+        width: 38%;
+    }
+
+    .sidespan span {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .sidespan span {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    
+    .page-bottom {
+        padding: 0 5px 50px 5px;
+    }
+
+    .sidespan span {
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    
+    .sidespan span {
+        font-size: 9px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* HomePage Specific Classes */
+/* -- Slides Section --- */
+.slideimagescont {
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
+}
+
+.slideimages {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #2a3439;
+    box-shadow: 5px 10px 8px 2px black;
+    border: 1px solid #F1F1F1;
+
+}
+@media (min-width: 951px) {
+    .slideimages {
+        height: 535px;
+        width: 951.11px;
+    }
+}
+@media (max-width: 950px) {
+    .slideimages {
+        height: 0;
+        overflow: hidden;
+        padding-top: 56.25%;
+        width: 100%;
+    }
+}
+
+
+.slideimages img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade {
+    /*Slideshow Animation Code Begins*//* Slideshow Code Source https: //snook.ca/archives/html_and_css/simplest-css-slideshow*/
+
+    0% {
+        opacity: 0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+    }
+
+    3.571% {        /*Animation Time - Time fade in occurs in seconds * (100/animation duration)*/
+        opacity: 0.8;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+    }
+
+    14.285% {       /*View Duration - Time image is fully visible * (100/animation duration)*/
+        opacity: 0.8;
+        -moz-opacity:0.8;
+        -khtml-opacity: 0.8;
+    }
+
+    17.857% {       /*Animation Time - Time fade out occurs in seconds * (100/animation duration)*/
+        opacity: 0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        -moz-opacity:0;
+        -khtml-opacity: 0;
+    }
+}
+
+.fadein img {
+    opacity: 0;
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    animation-name: fade;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.fadein img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fadein img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.fadein img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+.fadein img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+.fadein img:nth-child(5) {
+    animation-delay: 16s;
+}
+
+.fadein img:nth-child(6) {
+    animation-delay: 20s;
+}
+
+.fadein img:nth-child(7) {
+    animation-delay: 24s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Generations Boxes Section */
+
+.generations {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+.generations>div {
+    margin: 0 auto;
+    width: 95%;
+    margin-top: 40px;
+    position: relative;
+    padding-top: 35.15%;   /*aspect ratio for image size and picture*/
+    border: 3px solid yellow;
+}
+
+.genInstructionsText {
+    padding: 0 25px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: Tahoma, Verdana;
+    
+}
+
+.generations>div>a {
+    /* doesn't doo anything, just wraps around the words. Don't use this for styling */
+    color: none;
+}
+
+.genText {
+    position: absolute;
+    text-align: center;
+	line-height: 100%;
+    top: 50%;
+    left: 0%;
+    margin-top: -40px;
+    padding: 0 20px;
+	font-size: 40px;
+	color: white;
+	font-family: GrandSport, Verdana, Tahoma;
+    text-shadow: black 5px 0px 20px;
+    /* border: 2px solid pink; */
+}
+
+.generations img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	margin: 0;
+	top: 0;
+	left: 0%;
+    opacity: 0.8;
+    -moz-opacity:0.8;
+    -khtml-opacity: 0.8;
+    transition: 0.5s;
+
+}
+
+.generations a:hover img { /* .a + .b adjacent sibling combinator, means elements are right next to eachother but not descendants.
+                              .a ~ .b general sibling combinator, means elements are between the target elemtns, not descendants
+                              .a .b  use if .b is descendant of .a     ****NOTE**** .b should always come after .a in the html*/
+    opacity: 0.65;
+    -moz-opacity:0.65;
+    -khtml-opacity: 0.65;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 1024px) {
+    
+    .generations {
+        width: 100%;
+    }
+
+    .genInstructionsText {
+        font-size: 27.5px;
+    }
+
+    .genText {
+        font-size: 35px;
+        margin-top: -34.4px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    .genInstructionsText {
+        font-size: 20px;
+    }
+
+    .genText {
+        font-size: 30px;
+        margin-top: -29.6px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    
+    .genInstructionsText {
+        font-size: 15px;
+    }
+
+    .genText {
+        font-size: 25px;
+        margin-top: -24.8px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    
+    .genInstructionsText {
+        font-size: 12px;
+    }
+
+    .genText {
+        font-size: 20px;
+        margin-top: -20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Generations Page Specific Classes*/
+/* Title Section */
+.grid-cont {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.grid-title {
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.grid-title>span {
+    font-size: 58px;
+    color: white;
+    font-family: GrandSportSemital;
+    text-shadow: black 5px 0px 20px;
+}
+
+
+
+
+/* Years Grid */
+
+.cG {
+    position: relative;
+    border: 3px solid silver;
+    background-size: 101%;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+}
+
+.grid {
+    width: 85%;
+    height: 85%;
+    margin: 3.75% auto;
+    display: grid;
+    justify-content: space-around;
+    align-content: space-around;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid a {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.grid a:hover {
+    background: gray;
+    height: 55px;
+    width: 99px;
+    border: 4px solid silver;
+    transition: 0.4s;
+}
+
+.grid a:not(:hover) {
+    height: 50px;
+    width: 90px;
+    background-color: rgba(128, 128, 128, 0.85);
+    border: 2px solid orange;
+    transition: 0.3s ease-out;
+}
+@media(min-width: 1025px) {
+    .cG {
+        height: 576px;
+    }
+}
+@media(max-width: 1024px) {
+    .grid-cont {
+        width: 95%;
+        
+    }
+    .cG {
+        height: 0;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        position: relative;
+    }
+    .grid {
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        left: 50%;
+        margin-left: -45%;
+        top: 50%;
+        margin-top: -26.125%;
+        grid-template-columns: auto auto auto;
+    }
+    .grid-title>span {
+        font-size: 7.5vw;
+    }
+}
+
+@media(max-width: 770px) {
+    
+    .grid a:hover {
+        height: 40px;
+        width: 68px;
+    }
+    
+    .grid a:not(:hover) {
+        height: 35px;
+        width: 63px;
+        background-color: rgba(128, 128, 128, 0.9);
+    }
+
+}
+
+@media(max-width: 630px) {
+    .grid a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .grid a:hover {
+        height: 30px;
+        width: 50px;
+    }
+
+    .grid a:not(:hover) {
+        height: 25px;
+        width: 45px;
+    }
+}
+@media(max-width: 450px) {    
+    .grid a {
+        padding: 5px 10px;
+        font-size: 12.5px;
+        border: 1px solid orange;
+    }
+
+    .grid a:hover {
+        height: 25px;
+    }
+
+    .grid a:not(:hover) {
+        height: 20px;
+    }
+}
+
+@media(max-width: 350px) {
+
+    .grid a:hover {
+        height: 20px;
+        width: 35px;
+    }
+
+    .grid a:not(:hover) {
+        height: 15px;
+        width: 30px;
+    }
+
+}
+
+.cGc1 {
+    background-image: url(../Images/C1Background.jpg);
+}
+
+.cGc2 {
+    background-image: url(../Images/C2Background.jpg);
+}
+
+.cGc3 {
+    background-image: url(../Images/C3Background.jpg);
+}
+
+.cGc4 {
+    background-image: url(../Images/C4Background.jpg);
+}
+
+.cGc5 {
+    background-image: url(../Images/C5Background.jpg);
+}
+
+.cGc6 {
+    background-image: url(../Images/C6Background.jpg);
+}
+
+.cGc7 {
+    background-image: url(../Images/C7Background.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Model Year Specific Page Classes */
+
+.dispfont>span {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 10px;
+}
+
+
+
+
+.cGyearspec {
+    opacity: 0.9;
+    -moz-opacity:0.9;
+    -khtml-opacity: 0.9;
+}
+
+.cG1953 {
+    background-image: url(../Images/1953Corvette.jpg);
+}
+
+
+
+
+
+.infboxes-cont {
+    border: none;
+    /* border: 2px solid yellow; */
+}
+.infboxes {
+    display: block;
+    /* height: 50px; */
+    margin: 25px 0;
+    padding: 10px 7.5px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.infboxes>span {
+    padding-left: 15px;
+}
+
+.infboxes>span, button {
+    font-size: 20px;
+}
+
+.infboxes>button {
+    /* background-color: gray; */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* .infboxes button:focus + .restofbox {         failed way of using css and not javascript to make menu's respond, works on desktop and devices with a mouse but not on touch devices or mobile devices 
+    height: 100%;
+    padding: 15px;
+    border: 2px solid black;
+    transition: 0.75s;
+}
+
+
+.infboxes button:focus + .restofbox>span {
+    font-size: 15px;
+    color: white;
+    transition: 0.5s;
+}
+
+.infboxes button:not(:focus) + .restofbox {
+    height: 0px;
+    padding: 0px 15px;
+    border: 0px solid black;
+    transition: 0.5s;
+}
+
+.infboxes button:not(:focus) + .restofbox>span {
+    font-size: 0px;
+    transition: 0.75s;
+} */
+
+.restofbox {
+    height: 0;
+    overflow: hidden;
+    /* border: 2px solid yellow; */
+    /* padding: 13px 15px; */
+    /* border-radius: 25px; */
+}
+
+.restofbox span {
+    display: block;
+    font-size: 15px;
+}
+
+.togMe {
+    transition: 1s ease-in-out;
+    /* height: auto; */
+    /* border: 4px solid white; */
+}
+
+.unTog {
+    height: 0;
+    overflow: hidden;
+    transition: 1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.aboutmecont {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    /* border: 2px solid green; */
+}
+
+.aboutmetitle {
+    margin: 0 auto;
+    padding: 25px 0 65px 00;
+    text-align: center;
+    /* border: 2px solid yellow; */
+    color: white;
+}
+
+.name {
+    font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.knownfor {
+    font-size: 35px;
+    font-family: GrandSportSemital, Verdana, Tahoma;
+    display: block;
+
+}
+
+.headnwordscont {
+    display: flex;
+    justify-content: center;
+    padding: 0 0 10px 0;
+}
+
+.imgcont {
+    padding: 5px;
+    text-align: center;
+}
+
+.imgcont>img {
+    width: 99%;
+    border: 2px solid white;
+    box-shadow: 2px 6px 5px 4px black;
+}
+
+.wordscont {
+    padding: 0 20px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.morewordscont {
+    /* border: 0px solid purple; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Other Websites CSS */
+.blackjackstuff {
+    margin: 30px auto;
+    border: 2px solid pink;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blackjackstuff span {
+    color: silver;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.blackjackstuff a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* blackjack CSS */
+
+
+.cont {
+    width: 1024px;
+    margin: 35px auto;
+}
+
+.blackjackcont {
+    position: relative;
+    margin: 15px auto;
+    min-height: 85px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blackjackwelcome {
+    margin: auto auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackjackwelcome span {
+    color: white;
+    font-size: 25px;
+    position: relative;
+
+}
+
+.startbutton {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    margin-top: 42px;
+    margin-left: -75px;
+    font-size: 23px;
+    border-radius: 25px;
+    background-color: rgb(214, 214, 218);
+}
+
+.startButtonGone {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.pwins, .dwins {
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-evenly; 
+    position: absolute;
+    height: 80px;
+    width: 150px;
+    top: 50%;
+    margin-top: -40px;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+}
+
+.pwins {
+    left: 0;
+    margin-left: 25px;
+    
+}
+
+.dwins {
+    right: 0;
+    margin-right: 25px;
+}
+
+
+
+
+
+
+#game-table {
+    background-image: url(/Images/CardTableGreen.jpg);
+    border: 15px solid rgb(116, 35, 4);
+    border-radius: 50px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.blackjackgameholder {
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.blackjackgameholder>div {
+    min-width: 30%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin: 5px 10px;
+    padding: 5px 5px;
+}
+
+.blackjackgameholderM {
+    display: none;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    font-size: 20px;
+}
+
+.left span, .right span {
+    display: block;
+    padding: 0 8px;
+}
+
+.middle {
+    justify-content: space-between;
+}
+
+.middleTnB {
+    border: 2px solid white;
+    min-height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.middleB {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.middleButtsCont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.hitStayButtons {
+    padding: 5px;
+    height: 40px;
+    width: 120px;
+    background: #555;
+    color: rgb(243, 233, 233);
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.noHSButtons {
+    display: none;
+}
+
+.disableHitStayButtons {
+    opacity: 0.88;
+    background-color: grey;
+    color: lightgray;
+}
+
+
+
+
+/* Cards in blackjack */
+
+.cardHolder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 92%;
+    margin-top: 25px;
+}
+
+
+
+
+
+
+.popup {
+    position: fixed;
+    height: 150px;
+    width: 300px;
+    top: -200%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -151px;
+    padding: 2% 0;
+    background: grey;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 27px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0.95;
+}
+
+.popuptog {
+    top: 50%;
+    transition: 0.5s;
+}
+
+.popspans {
+    display: inline-block;
+}
+
+#replay-button {
+    width: 150px;
+    margin-left: 75px;
+    height: 40px;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    
+    .cont {
+        width: 90%;
+    }
+
+    .blackjackgameholder {
+        display: none;
+    }
+
+    .blackjackgameholderM {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        /* background-image: url(/Images/CardTableGreen.jpg); */
+        background-color: rgb(5, 97, 5);
+        border: 10px solid rgb(116, 35, 4);
+        border-radius: 50px;
+        padding: 40px 10px;
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 20px;
+    }
+
+    .pwins, .dwins {
+        height: 80px;
+        width: 120px;
+    }
+
+    .pwins {
+        margin-left: 20px;
+    }    
+
+    .dwins {
+        margin-right: 20px;
+    }
+
+    .leftM, .rightM {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        color: white;
+        border: 1.5px solid white;
+    }
+
+    .leftM {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .rightM {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    .spanholders {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .spanholders>div {
+        margin: 15px;    
+    }
+
+    .spanholders>div>span {
+        display: block;
+    }
+
+    .startbutton {
+        height: auto;
+        width: 140px;
+        margin-top: 26px;
+        margin-left: -70px;
+    }
+
+    .hitStayButtons {
+        padding: 5px;
+        height: 35px;
+        width: 105px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .blackjackgameholderM {
+        padding: 25px 10px;    /*40px 10px*/
+    }
+    
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 18px;       /*20px*/
+    }
+
+    .startbutton {
+        width: 110px;          /* 120px */
+        margin-left: -55px;
+    }
+
+    .hitStayButtons {
+        width: 95px;           /*105px*/
+    }
+}
+
+@media (max-width: 680px) {
+
+    .blackjackcont {
+        min-height: 65px;
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 16px;       /*18px*/
+    }
+
+    .pwins, .dwins {
+        height: 60px;          /*80px*/
+        width: 100px;          /*120px*/
+        margin-top: -30px;
+    }
+
+    .startbutton {
+        width: 100px;          /* 110px */
+        margin-top: 20px;      /*26px*/
+        margin-left: -50px;
+    }
+
+    .hitStayButtons {
+        height: 28px;          /*35px*/
+        width: 85px;           /*95px*/
+    }
+}
+
+@media (max-width: 600px) {
+
+    .blackjackcont {
+        min-height: 50px;      /*65px*/
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 14px;       /*45px*/
+    }
+
+    #banner {
+        padding: 2px 0px;
+    }
+
+    .pwins, .dwins {
+        height: 45px;          /*60px*/
+        width: 85px;           /*100px*/
+        margin-top: -22.5px;
+    }
+
+    .pwins {
+        margin-left: 15px;     /*20px*/
+    }    
+
+    .dwins {
+        margin-right: 15px;    /*20px*/
+    }
+
+    .startbutton {
+        width: 90px;           /* 100px */
+        margin-top: 16px;      /*20px*/
+        margin-left: -45px;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .blackjackcont {
+        min-height: 45px;      /*50px*/
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 12px;       /*14px*/
+    }
+
+    .pwins, .dwins {
+        height: 41px;          /*45px*/
+        width: 77px;           /*85px*/
+        margin-top: -20.5px;
+    } 
+
+    .pwins {
+        margin-left: 10px;     /*15px*/
+    }    
+
+    .dwins {
+        margin-right: 10px;    /*15px*/
+    }
+
+    .startbutton {
+        width: 80px;           /* 80px */
+        margin-top: 17px;      /*16px*/
+        margin-left: -40px;
+    }
+
+    .hitStayButtons {
+        width: 70px;           /*85px*/
+    }
+}
+
+@media (max-width: 430px) {
+    .blackjackcont {
+        min-height: 40px;      /*45px*/
+    }
+
+    .blackjackgameholderM {
+        padding: 15px 10px;    /*25px 10px*/
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 10px;       /*12px*/
+    }
+
+    .pwins, .dwins {
+        height: 36px;          /*41px*/
+        width: 61px;           /*77px*/
+        margin-top: -18px;
+    } 
+
+    .pwins {
+        margin-left: 7px;      /*10px*/
+    }    
+
+    .dwins {
+        margin-right: 7px;     /*10px*/
+    }
+
+    .startbutton {
+        margin-top: 14px;      /*17px*/
+    }
+
+    .hitStayButtons {
+        width: 60px;           /*70px*/
+    }
+}
+
+@media (max-width: 330px) {
+    .blackjackcont {
+        min-height: 30px;      /*40px*/
+    }
+
+    #banner, .pwins, .dwins, .startbutton, .hitStayButtons, .leftM, .rightM {
+        font-size: 8px;        /*10px*/
+    }
+
+    .pwins, .dwins {
+        height: 26px;          /*36px*/
+        width: 50px;           /*61px*/
+        margin-top: -12.5px;
+    } 
+
+    .startbutton {
+        width: 60px;           /*70px*/
+        margin-top: 12px;      /*14px*/
+        margin-left: -30px;
+    }
+
+    .hitStayButtons {
+        padding: 0px;          /*5px*/
+    }
+}
+
+
+
+
+
+
+
+
+/* 
+.placeholder {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.placeholder>span {
+    font-size: 50px;
+    color: silver;
+} */
